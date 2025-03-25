@@ -38,7 +38,7 @@ public class BTATestMethods {
     public static void Solis8(){
         $(BTASelectors.programmuSekcija).shouldBe(visible, Duration.ofSeconds(30)); //Gaida, līdz programmas ir redzamas (gaidīšanas laiks - 30 sekundes)
         executeJavaScript("window.scrollTo(0, (document.body.scrollHeight/2.5))"); //Ritina lapu uz lapas vidu, lai varētu nospiest pogu
-        try {
+        try { //Pauze, lai varētu nospiest pogu
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
